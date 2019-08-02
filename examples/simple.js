@@ -10,7 +10,7 @@
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
 /******/ 		for(;i < chunkIds.length; i++) {
 /******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId]) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 				resolves.push(installedChunks[chunkId][0]);
 /******/ 			}
 /******/ 			installedChunks[chunkId] = 0;
@@ -46,6 +46,7 @@
 /******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
 /******/ 			}
 /******/ 		}
+/******/
 /******/ 		return result;
 /******/ 	}
 /******/
@@ -163,10 +164,10 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var rc_rate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rc-rate */ "./index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/_react@16.7.0@react/index.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module 'rc-rate'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/_react-dom@16.7.0@react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _assets_index_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/index.less */ "./assets/index.less");
 /* harmony import */ var _assets_index_less__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_index_less__WEBPACK_IMPORTED_MODULE_3__);
@@ -177,14 +178,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function onChange(v) {
-  console.log('selected star', v);
+  console.log("selected star", v);
 }
 
 react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
   style: {
     margin: 100
   }
-}, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(rc_rate__WEBPACK_IMPORTED_MODULE_0__["default"], {
+}, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(!(function webpackMissingModule() { var e = new Error("Cannot find module 'rc-rate'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
   defaultValue: 2.5,
   onChange: onChange,
   style: {
@@ -192,7 +193,16 @@ react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_
   },
   allowHalf: true,
   allowClear: false
-}), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(rc_rate__WEBPACK_IMPORTED_MODULE_0__["default"], {
+}), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(!(function webpackMissingModule() { var e = new Error("Cannot find module 'rc-rate'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
+  isRtl: true,
+  defaultValue: 0,
+  onChange: onChange,
+  style: {
+    fontSize: 80
+  },
+  allowHalf: true,
+  allowClear: false
+}), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(!(function webpackMissingModule() { var e = new Error("Cannot find module 'rc-rate'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
   defaultValue: 2.5,
   onChange: onChange,
   style: {
@@ -201,7 +211,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_
   },
   allowHalf: true,
   character: "$"
-}), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(rc_rate__WEBPACK_IMPORTED_MODULE_0__["default"], {
+}), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(!(function webpackMissingModule() { var e = new Error("Cannot find module 'rc-rate'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
   defaultValue: 2.5,
   onChange: onChange,
   style: {
@@ -212,7 +222,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_
   character: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "anticon anticon-star"
   })
-}), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(rc_rate__WEBPACK_IMPORTED_MODULE_0__["default"], {
+}), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(!(function webpackMissingModule() { var e = new Error("Cannot find module 'rc-rate'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
   defaultValue: 2,
   onChange: onChange,
   style: {
@@ -222,7 +232,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_
   character: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "anticon anticon-star"
   })
-})), document.getElementById('__react-content'));
+})), document.getElementById("__react-content"));
 
 /***/ }),
 

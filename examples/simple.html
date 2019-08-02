@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>simple.js - example - rc-rate@2.5.0</title>
+  <title>simple.js - example - rnb-rc-rate@2.5.1</title>
   <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta charset="utf-8"/>
@@ -263,25 +263,25 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 <body>
   <div class="container">
     <div class="header">
-      <h1>rc-rate@2.5.0</h1>
+      <h1>rnb-rc-rate@2.5.1</h1>
 
       <p>React Star Rate Component</p>
     </div>
     <div class="example" id="__react-content"></div>
 
     <div class="highlight"><pre><code language="js"><span class="hljs-comment">/* eslint no-console: 0 */</span>
-<span class="hljs-keyword">import</span> Rate <span class="hljs-keyword">from</span> <span class="hljs-string">'rc-rate'</span>;
-<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
-<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'../assets/index.less'</span>;
+<span class="hljs-keyword">import</span> Rate <span class="hljs-keyword">from</span> <span class="hljs-string">"rc-rate"</span>;
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">"react"</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">"react-dom"</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">"../assets/index.less"</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">v</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'selected star'</span>, v);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"selected star"</span>, v);
 }
 
 ReactDOM.render(
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">margin:</span> <span class="hljs-attribute">100</span> }}&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Rate</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Rate</span>
       <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{2.5}</span>
       <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span>
       <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">fontSize:</span> <span class="hljs-attribute">40</span> }}
@@ -289,7 +289,16 @@ ReactDOM.render(
       <span class="hljs-attribute">allowClear</span>=<span class="hljs-value">{false}</span>
     /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Rate</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Rate</span>
+      <span class="hljs-attribute">isRtl</span>
+      <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{0}</span>
+      <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span>
+      <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">fontSize:</span> <span class="hljs-attribute">80</span> }}
+      <span class="hljs-attribute">allowHalf</span>
+      <span class="hljs-attribute">allowClear</span>=<span class="hljs-value">{false}</span>
+    /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Rate</span>
       <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{2.5}</span>
       <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span>
       <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">fontSize:</span> <span class="hljs-attribute">50</span>, <span class="hljs-attribute">marginTop:</span> <span class="hljs-attribute">24</span> }}
@@ -297,7 +306,7 @@ ReactDOM.render(
       <span class="hljs-attribute">character</span>=<span class="hljs-value">"$"</span>
     /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Rate</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Rate</span>
       <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{2.5}</span>
       <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span>
       <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">fontSize:</span> <span class="hljs-attribute">50</span>, <span class="hljs-attribute">marginTop:</span> <span class="hljs-attribute">24</span> }}
@@ -305,14 +314,15 @@ ReactDOM.render(
       <span class="hljs-attribute">character</span>=<span class="hljs-value">{&lt;i</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"anticon anticon-star"</span> /&gt;</span>}
     /&gt;
     <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Rate</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">Rate</span>
       <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{2}</span>
       <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{onChange}</span>
       <span class="hljs-attribute">style</span>=<span class="hljs-value">{{</span> <span class="hljs-attribute">fontSize:</span> <span class="hljs-attribute">50</span>, <span class="hljs-attribute">marginTop:</span> <span class="hljs-attribute">24</span> }}
       <span class="hljs-attribute">character</span>=<span class="hljs-value">{&lt;i</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">"anticon anticon-star"</span> /&gt;</span>}
     /&gt;
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-, document.getElementById('__react-content'));
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>,
+  document.getElementById("__react-content")
+);
 </span></code></pre></div>
   </div>
   <a href="https://github.com/react-component/rate">
