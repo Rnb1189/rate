@@ -1,0 +1,54 @@
+@import "./index-shared.less";
+
+@rate-prefix-cls: rc-rate;
+
+@L: e(".a-ltr");
+@R: e(".a-rtl");
+
+//OMid: disable direction
+.@{rate-prefix-cls} {
+   direction: ltr;
+}
+
+//R_____
+@{L}.@{rate-prefix-cls} {
+   &-disabled &-star {
+      &:hover {
+         transform: scale(1);
+      }
+   }
+
+   &-star {
+      margin-right: 8px;
+      &-focused,
+      &:hover {
+         transform: scale(1.1);
+      }
+
+      &-first {
+         left: 0;
+      }
+   }
+}
+
+//R_____
+@{R}.@{rate-prefix-cls} {
+   transform: scale(-1, 1);
+   &-disabled &-star {
+      &:hover {
+         transform: scale(-1);
+      }
+   }
+
+   &-star {
+      margin-left: 8px;
+      &-focused,
+      &:hover {
+         transform: scale(-1.1);
+      }
+
+      &-first {
+         right: 0;
+      }
+   }
+}
