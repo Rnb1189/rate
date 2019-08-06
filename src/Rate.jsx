@@ -243,7 +243,7 @@ class Rate extends React.Component {
          stars.push(
             <Star
                //NEW:
-               isRtl={this.isRtl}
+               isRtl={this.props.isRtl}
                ref={this.saveRef(index)}
                index={index}
                count={count}
